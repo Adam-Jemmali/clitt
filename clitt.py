@@ -42,14 +42,7 @@ def save_tasks(tasks):
 #[{'id': 1, 'title': 'Task 1', 'description': 'Description of Task 1', 'status': 'todo', 'created_at': '2023-06-01T10:00:00', 'updatedat': '2023-06-01T10:00:00'}, {'id': 2, 'title': 'Task 2', 'description': 'Description of Task 2', 'status': 'in progress', 'created_at': '2023-06-02T11:00:00', 'updatedat': '2023-06-02T11:00:00'}]
 
 def get_next_id(tasks):
-    """_summary_
-
-    Args:
-        tasks (PYTHON OBJECT): its a [ { ......}, { ......}]
-
-    Returns:
-        _type_: _description_
-    """
+    
     if not tasks:
         return 1
     return max(task['id'] for task in tasks) + 1
