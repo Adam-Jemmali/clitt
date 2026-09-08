@@ -41,8 +41,7 @@ def save_tasks(tasks):
 #PYTHON OBJECT AFTER CONVERTING JSON TO PYTHON OBJECT
 #[{'id': 1, 'title': 'Task 1', 'description': 'Description of Task 1', 'status': 'todo', 'created_at': '2023-06-01T10:00:00', 'updatedat': '2023-06-01T10:00:00'}, {'id': 2, 'title': 'Task 2', 'description': 'Description of Task 2', 'status': 'in progress', 'created_at': '2023-06-02T11:00:00', 'updatedat': '2023-06-02T11:00:00'}]
 
-def get_next_id(tasks):
-    
+def get_next_id(tasks): 
     if not tasks:
         return 1
     return max(task['id'] for task in tasks) + 1
@@ -183,6 +182,7 @@ def cmd_list(args):
 
 def main():
     args = sys.argv[1:]  # Exclude the script name that is in args[0] from the arguments
+    #sys = index 0 starts for the script name.py
 
 
     if len(args)==0:
